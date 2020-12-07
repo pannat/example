@@ -1,0 +1,65 @@
+.select {
+    margin-bottom: 20px;
+    border: 1px solid $c-border;
+    &:hover,
+    &:focus {
+        border-color: darken($c-border, 10%)
+    }
+    .select {
+        &-val-wrap {
+            margin: 0;
+            position: relative;
+            cursor: pointer;
+        }
+        &-val {
+            width: 100%;
+            padding: 8px 30px 8px 10px;
+            font: inherit;
+            font-weight: 600;
+            color: inherit;
+            cursor: inherit;
+            outline: none;
+            border: none;
+        }
+        &-arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: -6px;
+            right: 15px;
+            width: 12px;
+            height: 12px;
+            border-top: 2px solid $c-text-main;
+            border-right: 2px solid $c-text-main;
+            transform: rotate(45deg);
+            transition: transform .3s;
+        }
+
+        &-list {
+            display: none;
+            li {
+                font-weight: 400;
+                display: block;
+                box-shadow: none;
+                width: 100%;
+                border-bottom: 1px solid $c-border;
+                &:last-child {
+                    border-bottom: none;
+                }
+                &.active {
+                    color: $c-highlight;
+                }
+            }
+        }
+    }
+    &-expanded {
+        .select {
+            &-val {
+                color: rgba($c-text-main, .3);
+                border-bottom: 0;
+            }
+            &-arrow {
+                transform: rotate(135deg);
+            }
+        }
+    }
+}

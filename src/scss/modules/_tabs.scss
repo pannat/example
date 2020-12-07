@@ -8,9 +8,15 @@
         padding: 8px 20px;
         font-weight: bold;
         transition: color .2s linear;
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+            padding: 8px 10px;
+        }
 
         &.active {
             box-shadow: 0 1px 0 #fff, 0 0 0 1px $c-border;
+            @media (max-width: $mobile-max) {
+                box-shadow: none;
+            }
         }
 
         &:not(.active) {

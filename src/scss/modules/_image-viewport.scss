@@ -1,0 +1,11 @@
+.image-viewport {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    img {
+        position: absolute;
+        max-width: none;
+        width: auto;
+        cursor: move;
+    }
+}
